@@ -107,3 +107,19 @@ body {
     font-weight: bold;
   }
   
+
+  .container2{
+    display: flex;
+    justify-content: center;
+  }
+
+
+  .textbox{
+    width: 70%;
+    margin:  3px;
+    background-color: lightpink;
+  }
+  h1{
+    margin-left: 10px;
+    margin-top: 10px;
+  }
