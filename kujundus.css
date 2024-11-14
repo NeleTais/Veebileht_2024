@@ -106,20 +106,23 @@ body {
   
     font-weight: bold;
   }
-  
 
-  .container2{
-    display: flex;
-    justify-content: center;
-  }
-
-
-  .textbox{
-    width: 70%;
-    margin:  3px;
-    background-color: lightpink;
-  }
   h1{
     margin-left: 10px;
     margin-top: 10px;
   }
+  .content {
+
+    max-width: 800px; /* Maximum width for content */
+
+    margin: 20px auto; /* Center the content */
+
+    padding: 20px;
+
+    background-color: #ffffff; /* Background color for content area */
+
+    border: 1px solid #ccc; /* Optional border */
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+
+}
