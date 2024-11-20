@@ -1,5 +1,5 @@
 // kood on loodud võttes inspiratsiooni https://simplestepscode.com/javascript-quiz-tutorial/ leheküljelt, muutujanimetused ja paar muud asja on muudetud
-// js kood kirjeldab multiple choice questions quizi viienda alamlehe kohta, millel räägitakse mitmest väiksest õpihäkist
+// js kood kirjeldab multiple choice questions quizi esimese alamlehe kohta, millel räägitakse getting things done hackist
 document.addEventListener('DOMContentLoaded', function() {
 
     var konteiner = document.getElementById('quiz');
