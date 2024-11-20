@@ -11,22 +11,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
     var muküsimused = [
         {
-            küsimus: "Which list includes ideas and tasks as they occur to you?",
+            küsimus: "What should you do when you think you have learned the material well?",
             vastused: {
-                a: 'next actions list',
-                b: 'waiting for list',
-                c: 'in list'
+                a: 'Print out the material and put it under your pillow at night',
+                b: 'Try teaching it to others',
+                c: 'Not look at the material ever again since you have clearly mastered it'
             },
-            oigevastus: 'c'
+            oigevastus: 'b'
         },
         {
-            küsimus: "When should you move an idea to the someday/maybe list?",
+            küsimus: "What does the Feynman technique concentrate on?",
             vastused: {
-                a: "When you realize you don't have the time to deal with it at the moment",
-                b: 'When it is a something you definetly need to deal with soon',
-                c: 'When it is something you will never do or think about again'
+                a: 'Time management',
+                b: 'Being able to use information in a wide variety of situations',
+                c: 'The best monopoly strategies'
             },
-            oigevastus: 'a'
+            oigevastus: 'b'
         }
     ];
     
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         + '<input type="radio" name="küsimus'+i+'" value="'+täht+'">'
                         + täht + ': '
                         + küsimused[i].vastused[täht]
-                    + '</label>'
+                        + '</label>'
                 );
             }
             
@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
         esitanupp.onclick = function(){
 
             kuvatulemus(küsimused, konteiner, tulemused);
-        }
+        };
     }
     
     generateQuiz(muküsimused, konteiner, tulemused, esitanupp);
