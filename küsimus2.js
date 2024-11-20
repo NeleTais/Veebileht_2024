@@ -11,22 +11,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
     var muküsimused = [
         {
-            küsimus: "What is 10/2?",
+            küsimus: "What should you do when you think you have learned the material well?",
             vastused: {
-                a: '3',
-                b: '5',
-                c: '115'
+                a: 'Print out the material and put it under your pillow at night',
+                b: 'Try teaching it to others',
+                c: 'Not look at the material ever again since you have clearly mastered it'
             },
             oigevastus: 'b'
         },
         {
-            küsimus: "What is 30/3?",
+            küsimus: "What does the Feynman technique concentrate on?",
             vastused: {
-                a: '3',
-                b: '5',
-                c: '10'
+                a: 'Time management',
+                b: 'Being able to use information in a wide variety of situations',
+                c: 'The best monopoly strategies'
             },
-            oigevastus: 'c'
+            oigevastus: 'b'
         }
     ];
     
@@ -53,14 +53,18 @@ document.addEventListener('DOMContentLoaded', function() {
                     + '</label>'
                 );
             }
-    
-            // add this question and its answers to the output
+            
+
             väljund.push(
+
                 '<div class="küsimus">' + küsimused[i].küsimus + '</div>'
-                + '<div class="vastused">' + vastused.join('') + '</div>'
+    
+                + '<div class="vastused" style="display: flex; flex-direction: column;">' + vastused.join('') + '</div>'
+                + '<br>'
+    
             );
         }
-    
+        
         // finally combine our output list into one string of html and put it on the page
         konteiner.innerHTML = väljund.join('');
     }
