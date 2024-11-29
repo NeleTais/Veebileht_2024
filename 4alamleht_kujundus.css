@@ -1,0 +1,7 @@
+/*4 alamlehe eraldi kujundus (paneb pildile raami ümber)*/
+
+img {
+    border: 5px solid #555;
+    width: 500px;
+    height: auto;
+}

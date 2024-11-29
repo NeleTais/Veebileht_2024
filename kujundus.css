@@ -21,7 +21,7 @@ body {
   
   }
   
-  
+  /*kujundab menüüd nii, et  elemendid oleksid üksteise korval ja dünaamilised*/
   .menu {
   
     display: flex;
@@ -111,18 +111,20 @@ body {
     margin-left: 10px;
     margin-top: 10px;
   }
+
+  /*tekitab sisu jaoks teksikasti kus iga lehe sisu paikneb*/
   .content {
 
-    max-width: 800px; /* Maximum width for content */
+    max-width: 800px; 
 
-    margin: 20px auto; /* Center the content */
+    margin: 20px auto; /* Paneb contenti keskele */
 
     padding: 20px;
 
-    background-color: #ffffff; /* Background color for content area */
+    background-color: #ffffff;
 
-    border: 1px solid #ccc; /* Optional border */
+    border: 1px solid #ccc; /* tekstiboksi piire */
 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* tekstiboksi vari */
 
 }

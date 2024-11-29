@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     var esitanupp = document.getElementById('submit');
 
-
+    //siin on küsimuseed ja nende vastused
     var muküsimused = [
         {
             küsimus: "Which list includes ideas and tasks as they occur to you?",
@@ -31,20 +31,19 @@ document.addEventListener('DOMContentLoaded', function() {
     ];
     
     function kuvaküsimused(küsimused, konteiner){
-        // we'll need a place to store the output and the answer choices
+        // peame kuskil hoiustama meie küsimusi
         var väljund = [];
         var vastused;
     
-        // for each question...
+        // ja seda on vaja iga küsimuse kohta
         for(var i=0; i<küsimused.length; i++){
             
-            // first reset the list of answers
             vastused = [];
     
-            // for each available answer to this question...
+            // iga voimaliku vastuse kohta
             for(täht in küsimused[i].vastused){
     
-                // ...add an html radio button
+                // lisame ka vastamiseks html-i radio nupu
                 vastused.push(
                     '<label>'
                         + '<input type="radio" name="küsimus'+i+'" value="'+täht+'">'
@@ -65,52 +64,52 @@ document.addEventListener('DOMContentLoaded', function() {
             );
         }
         
-        // finally combine our output list into one string of html and put it on the page
+        // paneme lopliku valjundi oigesse kohta
         konteiner.innerHTML = väljund.join('');
     }
     
     
     function kuvatulemus(küsimused, konteiner, tulemused){
         
-        // gather answer containers from our quiz
+        // kogume vastuse konteinerid oma küsimustest
         var answerContainers = konteiner.querySelectorAll('.vastused');
         
-        // keep track of user's answers
+        // hoiame meeles mis vastused kasutaja sisestab
         var userAnswer = '';
         var numCorrect = 0;
         
-        // for each question...
+        // iga üsimuse kohta
         for(var i=0; i<küsimused.length; i++){
     
-            // find selected answer
+            // leiame valitud vastused
             userAnswer = (answerContainers[i].querySelector('input[name=küsimus'+i+']:checked')||{}).value;
             
-            // if answer is correct
+            // vaatame kas vastus on oige
             if(userAnswer===küsimused[i].oigevastus){
-                // add to the number of correct answers
+                // lisame selle oigesti vastatud küsimuste hulka
                 numCorrect++;
                 
-                // color the answers green
+                // küsimus värvub roheliseks
                 answerContainers[i].style.color = 'lightgreen';
             }
-            // if answer is wrong or blank
+            // kui vastus on tühi või vale
             else{
-                // color the answers red
+                // teeme küsimuse punaseks
                 answerContainers[i].style.color = 'red';
             }
         }
     
-        // show number of correct answers out of total
+        // naitame kui mitu oiget vastust kasutajal oli
         tulemused.innerHTML = numCorrect + ' out of ' + küsimused.length;
     }
     
     
     function generateQuiz(küsimused, konteiner, tulemused, esitanupp){
     
-        // show the questions
+        // naitame kusimusi
         kuvaküsimused(küsimused, konteiner);
     
-        // when user clicks submit, show results
+        // kui kasutaja vajutab "esita"/"submit" siis näitame tulemust
         esitanupp.onclick = function(){
 
             kuvatulemus(küsimused, konteiner, tulemused);
