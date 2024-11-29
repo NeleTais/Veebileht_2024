@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         + '<input type="radio" name="küsimus'+i+'" value="'+täht+'">'
                         + täht + ': '
                         + küsimused[i].vastused[täht]
-                    + '</label>'
+                        + '</label>'
                 );
             }
             
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
         esitanupp.onclick = function(){
 
             kuvatulemus(küsimused, konteiner, tulemused);
-        }
+        };
     }
     
     generateQuiz(muküsimused, konteiner, tulemused, esitanupp);
