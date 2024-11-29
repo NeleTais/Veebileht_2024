@@ -3,6 +3,8 @@ body {
     margin: 0;
   
     font-family: sans-serif;
+
+    background: linear-gradient(to bottom, #FFF0F5 35%, #DDA0DD 100%)
   
   }
   
@@ -15,7 +17,7 @@ body {
   
     align-items: center;
   
-    background-color: #f2f2f2;
+    background-color: #FFF0F5;
   
     padding: 20px;
   
@@ -30,7 +32,7 @@ body {
   
     width: 800px;
   
-    background-color: lightgray;
+    background-color: #D8BFD8;
   
     padding: 10px;
   
@@ -46,7 +48,7 @@ body {
   
     align-items: left;
   
-    background-color: #f2f2f2;
+    background-color: #FFF0F5;
   
     padding: 20px;
     display: flex;
